@@ -13,32 +13,47 @@
     <title>Nike Shop</title>
 </head>
 <body>
+    <!-- Début du header -->
     <header>
-        <nav class="navbar dark-mode" role="navigation">
-            <div class="navbar__logo">
-                <img src="./assets/images/fake-logo.jpeg" alt="Logo du site">
-            </div>
+        <div id="menu-bar" class="fas fa-bars"></div>
 
-            <ul class="navbar__links">
-                <li class="navbar__link first"><a href="#">Accueil</a></li>
-                <li class="navbar__link second"><a href="#">A propos</a></li>
-                <li class="navbar__link third"><a href="#">Services</a></li>
-                <li class="navbar__link four"><a href="#">Contact</a></li>
-            </ul>
-
-            <button class="burger">
-                <span class="bar"></span>
-            </button>
+        <a href="#" class="logo">nike</a>
+        
+        <nav class="navbar" role="navigation">
+            <a href="#">accueil</a>
+            <a href="#">produits</a>
+            <a href="#">nouveautés</a>
+            <a href="#">avis</a>
         </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
     </header>
+    <!-- Fin du header -->
 
-    <main class="main-content" role="main">
-    <h1>Bienvenue sur mon site web</h1>
-    <p>Ceci est le contenu de mon site web.</p>
-    </main>
+    <!-- Début du contenu principal -->
+    <section id="home" class="home" role="content">
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>nike rouges</span>
+                    <h3>nike metcon</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum quae tempora culpa nemo dignissimos ex quibusdam.</p>
+                    <a href="#" class="btn">ajouter au panier</a>
+                </div>
+                <div class="image"><img src="assets/images/home-shoe-1.png" alt="Chaussure "></div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin du contenu principal -->
 
+    <!-- Début du footer -->
     <footer>
         <p>Copyright &copy; 2023 Richard Befayt</p>
     </footer>
+    <!-- Fin du footer -->
 </body>
 </html>
