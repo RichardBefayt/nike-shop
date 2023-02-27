@@ -16,7 +16,7 @@
     --blue: #2836f0;
     --orange: #ff9f1a;
     --red: #f02525;
-    --black: #313146;
+    --black: #303233;
 
     --percent50: 50%;
     --percent100: 100%;
@@ -28,9 +28,6 @@
     --fw7: 700;
 
     --transition: all 0.2s linear;
-    --trans-color: color .3s;
-    --trans-background: background-color .3s;
-    --trans-background-color: background-color .3s, color .3s;
 }
 
 * {
@@ -231,6 +228,35 @@ header .icons a:hover {
     display: block;
 }
 
+.home #prev,
+.home #next {
+    cursor: pointer;
+    position: absolute;
+    top: var(--percent50);
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 4.5rem;
+    color: var(--black);
+    border: 0.2rem solid var(--black);
+    border-radius: var(--percent50);
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.home #prev:hover,
+.home #next:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.home #prev {
+    left: 3rem;
+}
+.home #next {
+    right: 3rem;
+}
+
 /***** Animations *****/
 @keyframes slideContent {
     0% {
@@ -259,6 +285,10 @@ header .icons a:hover {
     }
 
     header {
+        padding: 2rem;
+    }
+
+    section {
         padding: 2rem;
     }
 }
@@ -291,10 +321,23 @@ header .icons a:hover {
         border: 0.1rem solid var(--black);
         border-radius: 0.5rem;
     }
+
+    .home .slide-container .slide .image .text {
+        width: 60%;
+    }
+
+    .home #prev,
+    .home #next {
+        top: 55%;
+    }
 }
 
 @media (max-width: 400px) {
     html {
         font-size: 50%;
+    }
+
+    .home .slide-container .slide .image {
+        padding-bottom: 6rem;
     }
 }
