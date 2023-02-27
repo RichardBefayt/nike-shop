@@ -14,6 +14,7 @@
     --white: #fff;
     --light-white: #f9f9f9;
     --grey: #666;
+    --light-grey: #ccc;
     --blue: #2836f0;
     --orange: #ff9f1a;
     --red: #f02525;
@@ -410,6 +411,86 @@ header .icons a:hover {
 .products .box-container .box .icons a:hover {
     color: var(--white);
     background-color: var(--black);
+}
+
+/***** Produits Phares *****/
+.featured .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0rem;
+    padding: 2rem;
+    background-color: var(--light-white);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.featured .row .content {
+    flex: 1 1 40rem;
+}
+
+.featured .row .image-container {
+    flex: 1 1 50rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.featured .row .image-container .small-image {
+    width: 20%;
+}
+
+.featured .row .image-container .big-image {
+    width: 80%;
+    padding: 1rem;
+}
+
+.featured .row .image-container .small-image img {
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.featured .row .image-container .small-image img:hover {
+    background-color: var(--light-grey);
+}
+
+.featured .row .image-container .big-image img {
+    width: 100%;
+    transition: var(--transition);
+}
+.featured .row .image-container .big-image img:hover {
+    transform: scale(1.03);
+}
+
+.featured .row .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.featured .row .content .stars i {
+    padding: 0.5rem 0;
+    font-size: 1.7rem;
+    color: var(--orange);
+}
+
+.featured .row .content .stars p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--grey);
+}
+
+.featured .row .content .stars .price {
+    font-weight: var(--fw4);
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.featured .row .content .stars .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: var(--orange);
 }
 
 /***** Responsive *****/
