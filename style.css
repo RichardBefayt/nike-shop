@@ -1,3 +1,5 @@
+/***** Paramètres de départ *****/
+/***** Fonts *****/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 /* Nunito : 
@@ -10,7 +12,7 @@
 
 :root {
     --white: #fff;
-    --grey: #c5c3ca;
+    --grey: #666;
     --blue: #2836f0;
     --orange: #ff9f1a;
     --red: #f02525;
@@ -54,6 +56,10 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+section {
+    padding: 2rem 9%;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -73,6 +79,25 @@ input {
     font: inherit;
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    font-weight: var(--fw6);
+    color: var(--black);
+    background-color: var(--white);
+    border: 0.2rem solid var(--black);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/***** En-tête *****/
 header {
     position: fixed;
     display: flex;
@@ -120,7 +145,114 @@ header .icons a:hover {
     border-radius: 0.3rem;
 }
 
-/* Responsive */
+/***** Contenu principal *****/
+.home {
+    position: relative;
+    padding: 0;
+}
+
+.home .slide-container .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    gap: 1.5rem;
+    padding: 0 9%;
+    padding-top: 9rem;
+}
+
+.home .slide-container .slide .content {
+    flex: 1 1 40rem;
+    animation: slideContent .5s linear 1s backwards;
+}
+
+.home .slide-container .slide .content span {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.home .slide-container .slide .content h3 {
+    font-size: 5rem;
+    color: var(--black);
+}
+
+.home .slide-container .slide .content p {
+    padding: 0.5rem 0;
+    font-size: 1.7rem;
+    color: var(--grey);
+}
+
+.home .slide-container .slide .image {
+    flex: 1 1 50rem;
+    position: relative;
+    padding-bottom: 15rem;
+    z-index: 0;
+}
+
+.home .slide-container .slide .image .shoe {
+    width: 100%;
+    transform: rotate(-35deg);
+    animation: shoe .4s linear;
+}
+
+.home .slide-container .slide .image .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: shoeText .5s linear .5s backwards;
+}
+
+.home .slide-container:nth-child(1) .slide {
+    background-image: url(../assets/images/home-bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .slide-container:nth-child(2) .slide {
+    background-image: url(../assets/images/home-bg-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .slide-container:nth-child(3) .slide {
+    background-image: url(../assets/images/home-bg-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .slide-container {
+    display: none;
+}
+.home .slide-container.active {
+    display: block;
+}
+
+/***** Animations *****/
+@keyframes slideContent {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+}
+
+@keyframes shoe {
+    0% {
+        transform: rotate(0deg) scale(.5);
+    }
+}
+
+@keyframes shoeText {
+    0% {
+        opacity: 0;
+        top: -10rem;
+    }
+}
+
+/***** Responsive *****/
 @media (max-width: 991px) {
     html {
         font-size: 55%;
