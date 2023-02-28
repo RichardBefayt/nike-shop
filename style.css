@@ -11,6 +11,15 @@
 */
 
 :root {
+    --percent50: 50%;
+    --percent100: 100%;
+
+    --fw2: 200;
+    --fw3: 300;
+    --fw4: 400;
+    --fw6: 600;
+    --fw7: 700;
+
     --white: #fff;
     --light-white: #f9f9f9;
     --grey: #666;
@@ -20,14 +29,7 @@
     --red: #f02525;
     --black: #303233;
 
-    --percent50: 50%;
-    --percent100: 100%;
-
-    --fw2: 200;
-    --fw3: 300;
-    --fw4: 400;
-    --fw6: 600;
-    --fw7: 700;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.1);
 
     --transition: all 0.2s linear;
 }
@@ -80,11 +82,6 @@ a {
 
 ul {
     list-style: none;
-}
-
-img {
-    max-width: var(--percent100);
-    vertical-align: middle;
 }
 
 input {
@@ -300,7 +297,7 @@ header .icons a:hover {
     gap: 1.5rem;
     padding: 2rem;
     background-color: var(--light-white);
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border: var(--border);
     border-radius: 0.5rem;
 }
 
@@ -338,7 +335,7 @@ header .icons a:hover {
     position: relative;
     text-align: center;
     background-color: var(--light-white);
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border: var(--border);
     border-radius: 0.5rem;
     overflow: hidden;
 }
@@ -422,7 +419,7 @@ header .icons a:hover {
     margin: 1.5rem 0rem;
     padding: 2rem;
     background-color: var(--light-white);
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border: var(--border);
     border-radius: 0.5rem;
 }
 
@@ -493,6 +490,46 @@ header .icons a:hover {
     color: var(--orange);
 }
 
+/***** Avis Clients *****/
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review .box-container .box {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--light-white);
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.review .box-container .box img {
+    width: 15rem;
+    height: 15rem;
+    margin: 1rem 0;
+    border-radius: var(--percent50);
+    object-fit: cover;
+}
+
+.review .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.review .box-container .box p {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--grey);
+}
+
+.review .box-container .box .stars i {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
 /***** Responsive *****/
 @media (max-width: 991px) {
     html {
@@ -519,7 +556,7 @@ header .icons a:hover {
         left: -120%;
         width: var(--percent100);
         background-color: var(--grey);
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        border-top: var(--border);
     }
     header .navbar.active {
         transition: var(--transition);
