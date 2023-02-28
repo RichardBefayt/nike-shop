@@ -319,7 +319,7 @@ header .icons a:hover {
 
 .service .box-container .box p {
     padding: 1rem 0;
-    font-size: 4rem;
+    font-size: 1.4rem;
     color: var(--grey);
 }
 
@@ -577,6 +577,54 @@ header .icons a:hover {
     border-radius: 0;
 }
 
+/***** Footer *****/
+.footer {
+    padding: 2rem 9%;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--light-white);
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.footer .box-container .box {
+    flex: 1 1 20rem;
+}
+
+.footer .box-container .box h3 {
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.footer .box-container .box a {
+    display: block; /* Permet de mettre en colonne en leur faisant prendre toute la place sur la longueur */
+    padding-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--grey);
+}
+.footer .box-container .box a:hover {
+    color: var(--orange);
+}
+
+.footer .box-container .credit {
+    width: var(--percent100);
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--grey);
+    border-top: var(--border);
+}
+
+.footer .box-container .credit span {
+    color: var(--orange);
+}
+
 /***** Responsive *****/
 @media (max-width: 991px) {
     html {
@@ -588,6 +636,10 @@ header .icons a:hover {
     }
 
     section {
+        padding: 2rem;
+    }
+    
+    .footer {
         padding: 2rem;
     }
 }
