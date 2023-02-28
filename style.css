@@ -530,6 +530,53 @@ header .icons a:hover {
     color: var(--orange);
 }
 
+/***** Newsletter *****/
+.newsletter {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.newsletter .content {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--light-white);
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.newsletter .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.newsletter .content p {
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    color: var(--grey);
+}
+
+.newsletter .content form {
+    display: flex;
+    max-width: 50rem;
+    margin: 1rem auto;
+}
+
+.newsletter .content form .box {
+    width: var(--percent100);
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    color: var(--black);
+    border: 0.2rem solid var(--black);
+    border-right: none;
+}
+
+.newsletter .content form .btn {
+    border-radius: 0;
+}
+
 /***** Responsive *****/
 @media (max-width: 991px) {
     html {
